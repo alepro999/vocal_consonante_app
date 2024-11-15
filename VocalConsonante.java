@@ -15,7 +15,9 @@ public class VocalConsonante {
         String opcion;
         String palabra;
         char ch;
-        int vocal, consonante;
+        int vocal, consonantes;
+        String vocales, consonante;
+        
         
         do {            
             
@@ -25,6 +27,9 @@ public class VocalConsonante {
             palabra = in.nextLine();
             vocal = 0;
             consonante = 0;
+            vocales = ' ';
+            consonantes = ' ';
+
             
             switch (opcion) {
                 
@@ -36,17 +41,21 @@ public class VocalConsonante {
 
                         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ){
 
+                            vocales += ch + ' ';
+
                             vocal ++;
 
                         } else { 
 
                             consonante ++;
 
+
                         }
 
                     }
                     
                     System.out.println("En la palabra " + palabra + " hay " + vocal + " vocales");
+                    System.out.println("Las vocales que hay en tu palabra son: " + vocales );
                     
                     break;
                 
@@ -64,11 +73,16 @@ public class VocalConsonante {
 
                             consonante ++;
 
+                            
+                            consonantes += ch + ' ';
+
+
                         }
 
                     }
                     
                     System.out.println("En la palabra " + palabra + " hay " + consonante + " consonantes");
+                    System.out.println("Las consonantes que hay en tu palabra son: " + consonantess )
                     
                     break;
                 
